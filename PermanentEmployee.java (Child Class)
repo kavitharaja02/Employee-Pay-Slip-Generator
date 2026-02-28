@@ -1,0 +1,26 @@
+// PermanentEmployee.java
+class PermanentEmployee extends Employee {
+
+    private double hra;
+    private double da;
+
+    PermanentEmployee(int empId, String name, double basicSalary) {
+        super(empId, name, basicSalary);
+        hra = 0.20 * basicSalary; // 20% HRA
+        da = 0.10 * basicSalary;  // 10% DA
+    }
+
+    // Method Overriding
+    double calculateSalary() {
+        return basicSalary + hra + da;
+    }
+
+    void generatePaySlip() {
+        displayDetails();
+        System.out.println("Employee Type : Permanent");
+        System.out.println("Basic Salary : " + basicSalary);
+        System.out.println("HRA : " + hra);
+        System.out.println("DA : " + da);
+        System.out.println("Total Salary : " + calculateSalary());
+    }
+}
