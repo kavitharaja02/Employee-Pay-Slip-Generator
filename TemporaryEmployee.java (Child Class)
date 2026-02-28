@@ -1,0 +1,25 @@
+// TemporaryEmployee.java
+class TemporaryEmployee extends Employee {
+
+    private int workingDays;
+    private double dailyWage;
+
+    TemporaryEmployee(int empId, String name, double dailyWage, int workingDays) {
+        super(empId, name, 0);
+        this.dailyWage = dailyWage;
+        this.workingDays = workingDays;
+    }
+
+    // Method Overriding
+    double calculateSalary() {
+        return dailyWage * workingDays;
+    }
+
+    void generatePaySlip() {
+        displayDetails();
+        System.out.println("Employee Type : Temporary");
+        System.out.println("Daily Wage : " + dailyWage);
+        System.out.println("Working Days : " + workingDays);
+        System.out.println("Total Salary : " + calculateSalary());
+    }
+}
