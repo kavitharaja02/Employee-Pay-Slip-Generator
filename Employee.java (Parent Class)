@@ -1,0 +1,24 @@
+// Employee.java
+class Employee {
+    protected int empId;
+    protected String name;
+    protected double basicSalary;
+
+    // Constructor
+    Employee(int empId, String name, double basicSalary) {
+        this.empId = empId;
+        this.name = name;
+        this.basicSalary = basicSalary;
+    }
+
+    // Method to calculate salary (will be overridden)
+    double calculateSalary() {
+        return basicSalary;
+    }
+
+    // Display employee details
+    void displayDetails() {
+        System.out.println("Employee ID : " + empId);
+        System.out.println("Employee Name : " + name);
+    }
+}
